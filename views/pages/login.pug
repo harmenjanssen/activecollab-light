@@ -2,3 +2,29 @@ extends ../layout.pug
 
 block content
   h1="Login"
+  form(method="post")
+    div
+      label(for="email-field")= "Email"
+      input(
+        type="email", name="email", id="email-field", required
+      )
+
+    div
+      label(for="password-field")= "Password"
+      input(
+        type="password", name="password", id="password-field", required
+      )
+
+    div
+      label(for="self-hosted-field")= "Self-hosted Url"
+      input(
+        type="url", name="self_hosted", id="self-hosted-field",
+        placeholder="https://example.com", required
+      )
+
+    div
+      input(type="submit", value="Login")
+
+    if error
+      p.error= error
+
