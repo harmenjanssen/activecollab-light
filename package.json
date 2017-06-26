@@ -1,0 +1,11 @@
+{
+  "name": "activecollab-light",
+  "version": "1.0.0",
+  "description": "Very lightweight interface around ActiveCollab's API.",
+  "main": "index.js",
+  "author": "Harmen Janssen",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
