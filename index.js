@@ -6,7 +6,7 @@ const cookieSession = require("cookie-session");
 const bodyParser = require("body-parser");
 const isAuthenticated = require("./util/is-authenticated");
 
-const routes = ["auth"].reduce(
+const routes = ["auth", "projects"].reduce(
   (routes, id) =>
     Object.assign(routes, { [`/${id}`]: require(`./routes/${id}`) }),
   {}
@@ -35,6 +35,11 @@ app.set("view engine", "pug");
  */
 app.use("/", require("./routes/pages"));
 Object.keys(routes).map(baseUrl => app.use(baseUrl, routes[baseUrl]));
+
+app.use((err, res, req, next) => {
+  console.error(err);
+  res.status(500).render("errors/error");
+});
 
 app.listen(3000, () => {
   console.log("Server listening on port 3000");

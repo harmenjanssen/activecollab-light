@@ -23,9 +23,9 @@ acorn@^4.0.4, acorn@~4.0.2:
   version "4.0.13"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
-activecollabjs@^1.0.4:
+activecollabjs@harmenjanssen/activecollab:
   version "1.0.4"
-  resolved "https://registry.yarnpkg.com/activecollabjs/-/activecollabjs-1.0.4.tgz#4382c51edde1d50e3fd489d64879a8680c2d1fc9"
+  resolved "https://codeload.github.com/harmenjanssen/activecollab/tar.gz/d648b600208a1874d54486b6f803ed7de53c8d05"
   dependencies:
     lodash "^4.17.4"
     request "^2.81.0"
